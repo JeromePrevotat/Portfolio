@@ -47,6 +47,35 @@ body {
     position: relative;
 }
 
+.btn-container {
+    margin-left: auto;
+    margin-right: 2%;
+    position:relative;
+    width: 10%;
+}
+
+.btn-container img {
+    width: 100%;
+}
+
+.btn-container .btn-github {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: Transparent;
+}
+
+.container .btn:hover {
+    background-color: black;
+}
+
 /***********************************************
 *                   MAIN PART                  *
 ***********************************************/
@@ -83,7 +112,7 @@ body {
     list-style-type: none;
     background-image: linear-gradient(to bottom, rgba(255, 255, 0, 1), rgba(255, 255, 0, 1));
 
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .project {
