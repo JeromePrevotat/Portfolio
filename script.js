@@ -12,7 +12,7 @@ let init, dom_strings;
         console.log(redirect_to);
         if(window.location.href == 'https://jeeej.github.io' || window.location.href == `file:///home/jeeej/Portfolio/index.html`){
             console.log('IF');
-            /*window.location.href=redirect_to;*/
+            window.location.href=redirect_to;
         }
     };
     let setup_event_listener = function(){
