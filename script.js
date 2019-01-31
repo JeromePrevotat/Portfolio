@@ -9,8 +9,11 @@ let init, dom_strings;
         childs = event.target.parentNode.parentNode.childNodes;
         project_name = childs[1].textContent.trim();
         redirect_to = `https://github.com/jeeej/${project_name}`;
-        if(window.location.href == 'https://jeeej.github.io' || window.location.href == `file:///home/jeeej/Portfolio/index.html`)
-            window.location.href=redirect_to;
+        console.log(redirect_to);
+        if(window.location.href == 'https://jeeej.github.io' || window.location.href == `file:///home/jeeej/Portfolio/index.html`){
+            console.log('IF');
+            /*window.location.href=redirect_to;*/
+        }
     };
     let setup_event_listener = function(){
         let download_buttons;
