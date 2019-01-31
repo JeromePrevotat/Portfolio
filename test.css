@@ -39,7 +39,7 @@ body {
     */
 
     height: 20vh;
-    padding: 2%;
+    padding: 1%;
     background: no-repeat;
     background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.2));
     background-position: left;
@@ -52,7 +52,7 @@ body {
 ***********************************************/
 .main {
     height: 60vh;
-    padding: 2%;
+    padding: 1%;
     background: no-repeat;
     background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.2));
     background-position: center;
@@ -71,8 +71,9 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
-    height: 100%;
-    padding: 1%;
+    height: 90%;
+    padding-top: 1%;
+    padding-bottom: : 1%;
     background: no-repeat;
     background-image: linear-gradient(to bottom, rgba(255, 255, 0, 1), rgba(255, 255, 0, 1));
     background-position: center;
@@ -125,7 +126,7 @@ body {
 ***********************************************/
 .bottom {
     height: 20vh;
-    padding: 2%;
+    padding: 1%;
     background: no-repeat;
     background-image: linear-gradient(to bottom, rgba(0, 255, 0, 0.4), rgba(0, 255, 0, 0.2));
     background-position: center;
