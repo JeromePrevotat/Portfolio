@@ -5,6 +5,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
+}
+
+ul {
+    padding-left: 1em;
+}
+
+.skill-container ul li:before {
+  content: "-";
+  position: absolute;
+  margin-left: -1em;
+}
+
+li {
+    padding-left: 2%;
 }
 
 body {
@@ -78,7 +93,6 @@ body {
 *                   MAIN PART                  *
 ***********************************************/
 .main {
-    height: 65vh;
     padding: 1%;
     background: no-repeat;
     background-position: center;
@@ -114,7 +128,7 @@ body {
 .project {
     flex-shrink: 0;
 
-    width: 25%;
+    width: 30%;
     padding: 1%;
     margin: 1%;
     display: grid;
@@ -179,6 +193,17 @@ body {
     width: 45%;
     height: 75%;
     margin: 2%;
+}
+
+.container {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 33% 33% 33%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: auto;
+    background-image: linear-gradient(to bottom, rgba(0, 255, 0, 1), rgba(0, 255, 0, 1));
 }
 
 /***********************************************
