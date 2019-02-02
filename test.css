@@ -98,7 +98,7 @@ body {
     background-position: center;
     background-size: 100%;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("ressources/img/background.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("ressources/img/background.jpg");
 }
 
 .div {
@@ -137,7 +137,7 @@ body {
 
     text-align: center;
 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
 }
 
 .project-name {
@@ -180,7 +180,7 @@ body {
     background-position: center;
     background-size: 100%;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
     text-align: left;
 }
 
