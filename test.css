@@ -98,7 +98,7 @@ body {
     background-position: center;
     background-size: 100%;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.2));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("ressources/img/background.jpg");
 }
 
 .div {
@@ -120,7 +120,6 @@ body {
     position: relative;
 
     list-style-type: none;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 0, 1), rgba(255, 255, 0, 1));
 
     overflow-x: scroll;
 }
@@ -133,21 +132,29 @@ body {
     margin: 1%;
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 85% 15%;
+    grid-template-rows: 8% 80% 12%;
     position: relative;
 
     text-align: center;
 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
+}
+
+.project-name {
+    width: 100%;
+    grid-column: 1/ span 2;
+    position: relative;
+    font-size: 20px;
 }
 
 .preview {
     height: 100%;
-    padding: 1%;
     display: inline-block;
     background: no-repeat;
     background-position: center;
     position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border-style: solid;
 
     text-align: center;
 }
@@ -163,36 +170,41 @@ body {
     text-align: center;
 }
 
+
 .skills {
+    border-style: solid;
+    border-left: hidden;
     padding: 1%;
     display: inline-block;
     background: no-repeat;
     background-position: center;
     background-size: 100%;
     position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1));
     text-align: left;
-    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 1), rgba(255, 0, 0, 1));
 }
 
 .links {
+    border-style: solid;
+    border-top: hidden;
     grid-column: 1/ span 2;
     background: no-repeat;
     background-position: center;
     background-size: 100%;
     position: relative;
-    background-image: linear-gradient(to bottom, rgba(0, 255, 0, 1), rgba(0, 255, 0, 1));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
 }
 
 .btn-download {
+    margin: 1%;
     width: 45%;
     height: 75%;
-    margin: 2%;
 }
 
 .btn-source {
+    margin: 1%;
     width: 45%;
     height: 75%;
-    margin: 2%;
 }
 
 .container {
@@ -203,7 +215,7 @@ body {
     padding-bottom: 1%;
     padding-left: 2%;
     padding-right: auto;
-    background-image: linear-gradient(to bottom, rgba(0, 255, 0, 1), rgba(0, 255, 0, 1));
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.01));
 }
 
 /***********************************************
