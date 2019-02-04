@@ -1,7 +1,8 @@
 let init, dom_strings;
 {
     dom_strings = {
-        btn_source_code: ".btn-source"
+        btn_source_code: ".btn-source",
+        top_text: ".top-text"
     };
 
     let redirect = function(event){
@@ -22,8 +23,23 @@ let init, dom_strings;
             download_buttons[i].addEventListener('click', redirect);
         }
     };
+    let init_text = function(){
+        let text;
+        text = "Yolooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
+        "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
+        document.querySelector(dom_strings.top_text).insertAdjacentHTML('beforeend', text);
+    };
     init = function(){
-            setup_event_listener();
+        init_text();
+        setup_event_listener();
     };
 }
 
