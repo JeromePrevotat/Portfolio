@@ -29,6 +29,9 @@ h2 {
 }
 
 body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("ressources/img/background-tech-01.jpg");
 }
 
@@ -153,7 +156,7 @@ li {
     border-radius: 10px;
 }
 .list-container::-webkit-scrollbar-track-piece {}
-    .list-container::-webkit-scrollbar-track {}
+.list-container::-webkit-scrollbar-track {}
 .list-container::-webkit-scrollbar-corner {}
 .list-container::-webkit-resizer {}
 
