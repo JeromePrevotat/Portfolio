@@ -28,7 +28,7 @@ h2 {
     text-decoration: underline;
 }
 
-body {
+html {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% auto;
