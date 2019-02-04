@@ -76,6 +76,7 @@ li {
 
 .btn-container {
     display: flex;
+    justify-content: flex-end;
     padding: 1%;
     width: 20%;
     box-sizing: border-box;
@@ -85,16 +86,14 @@ li {
 }
 
 .btn-icon-container {
-    margingleft: 1%;
     margin-right: 1%;
+    margin-left: 1%;
     box-sizing: border-box;
-    width: 50%;
     height: 30px;
     object-fit: scale-down;
 }
 
 .btn-icon>img{
-    float: right;
     padding: 1%;
     height: 100%;
     border: none;
