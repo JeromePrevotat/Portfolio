@@ -9,6 +9,7 @@
 }
 
 body {
+    height: 100vh;
     color: black;
     font-family: Open Sans;
     font-size: 16px;
