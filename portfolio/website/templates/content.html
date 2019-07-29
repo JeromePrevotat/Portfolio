@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block body_block %}
+
+<h1 class="display-3">Prévotat Jérôme</h1>
+
+<!--
+---- TOP PART
+--->
+<div class="container-fluid">
+    <h3>Contact :</h3>
+    <div class="row mx-auto categorie">
+        <div class="col-10">
+            <p id="top-text"></p>
+        </div>
+        <div class="col-2 align-self-end">
+            <div class="row">
+                <div class="col-4">
+                    <a class="img-link" href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-pr%C3%A9votat-656165158/">
+                        <img class="img-fluid" src="{% static 'buttons/linkedin-icon.png' %}"/>
+                    </a>
+                </div>
+                <div class="col-8">
+                    <a class="img-link" href="https://github.com/jeeej">
+                        <img class="img-fluid" src="{% static 'buttons/github-icon.png' %}"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--
+---- MIDDLE PART
+--->
+    <h3>Compétences :</h3>
+    <div class="mx-auto categorie">
+        <p>blabla</p>
+    </div>
+
+<!--
+---- MIDDLE PART 2
+--->
+    <h3>Expérience :</h3>
+    <div class="mx-auto categorie">
+        <p>blabla</p>
+    </div>
+
+<!--
+---- BOTTOM PART 2
+--->
+    <h3>Études :</h3>
+    <div class="mx-auto categorie">
+        <p>blabla</p>
+    </div>
+</div>
+<script src="script.js"></script>
+{% endblock %}
