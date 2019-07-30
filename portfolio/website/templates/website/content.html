@@ -1,17 +1,25 @@
-{% extends 'index.html' %}
+{% extends 'website/index.html' %}
 {% load staticfiles %}
 {% block body_block %}
 
 <h1 class="display-3">Prévotat Jérôme</h1>
 
-<!--
+<!--------------------------------------------------------------------------------------------------
 ---- TOP PART
---->
+--------------------------------------------------------------------------------------------------->
 <div class="container-fluid">
     <h3>Contact :</h3>
     <div class="row mx-auto categorie">
-        <div class="col-10">
-            <p id="top-text"></p>
+        <div class="col-5">
+            <p class="top-text">Téléphone : 06.69.01.99.71
+                <br>Email : jer.prevotat@gmail.com
+            </p>
+        </div>
+        <div class="col-5">
+            <p class="top-text">Adresse Postale :
+                <br>131 Ter Avenue de Clichy
+                <br>75017 Paris
+            </p>
         </div>
         <div class="col-2 align-self-end">
             <div class="row">
@@ -29,9 +37,9 @@
         </div>
     </div>
 
-<!--
+<!--------------------------------------------------------------------------------------------------
 ---- MIDDLE PART
---->
+--------------------------------------------------------------------------------------------------->
     <h3>Compétences :</h3>
     <div id="custom-list-skills" class="row mx-auto categorie">
         <div class="col-4 container">
@@ -48,6 +56,7 @@
             <h5>Frameworks :</h5>
             <ul class="list-unstyled">
                 <li>Django</li>
+                <li>Bootstrap</li>
             </ul>
         </div>
         <div class="col-4 container">
@@ -59,42 +68,26 @@
         </div>
     </div>
 
-<!--
+<!--------------------------------------------------------------------------------------------------
 ---- MIDDLE PART 2
---->
+--------------------------------------------------------------------------------------------------->
     <h3>Expérience :</h3>
-    <div id="custom-list-skills-2" class="mx-auto row categorie horizontal-list-container">
-        <div class="col-4 project">
-            <div class="row">
-                <div class="col-12 project-name">
-                    <p>TEST</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-8 project-icon">
-                    <img class="img-fluid" src="{% static 'img/communication-icon.png' %}"></img>
-                </div>
-                <div class="col-4 project-skills">
-                    <h6>Skills :</h6>
-                    <ul class="list-unstyled">
-                        <li>Sockets</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row project-link">
-                <div class="col-12">
-                    <button class="btn btn-danger btn-source" type="button">See Source Code</button>
-                </div>
-            </div>
-        </div>
+    <div id="custom-list-skills-2" class="row categorie horizontal-list-container no-gutters">
+        {% block project_block%}
+        {% endblock %}
     </div>
 
-<!--
+<!--------------------------------------------------------------------------------------------------
 ---- BOTTOM PART 2
---->
+--------------------------------------------------------------------------------------------------->
     <h3>Études :</h3>
-    <div class="mx-auto categorie">
-        <p>blabla</p>
+    <div class="row mx-auto categorie">
+        <div class="col-6 container">
+            <p>Bac Scientifique Spé Maths <br> Lycée Saint Cyr <br> 58000 Nevers</p>
+        </div>
+        <div class="col-6 container">
+            <p>42 Born to Code <br> 75017 Paris</p>
+        </div>
     </div>
 </div>
 <script src="script.js"></script>

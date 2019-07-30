@@ -4,8 +4,8 @@ from django.urls import reverse
 # Create your models here.
 class Project(models.Model):
     project_name = models.CharField(max_length=50)
-    skills = models.TextField()
-    img = models.ImageField(upload_to='website/static/img/')
+    description = models.TextField()
+    img = models.ImageField(upload_to='')
 
     def add_project():
         self.save()

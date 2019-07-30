@@ -4,9 +4,9 @@ from website.models import Project
 class ProjectForm(form.ModelForm):
     class Meta():
         model = Project
-        fields = ('project_name', 'skills', 'img')
+        fields = ('project_name', 'description', 'img')
         widgets = {
             'project_name':form.TextInput(attrs={'class':'textinputclass'}),
-            'skills':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent'}),
+            'description':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent'}),
             'img':forms.ImageField(),
         }

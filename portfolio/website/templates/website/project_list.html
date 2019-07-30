@@ -1,0 +1,31 @@
+{% extends 'content.html' %}
+{% load staticfiles %}
+{% block project_block %}
+    {% for project in project_list %}
+        <div class="col-4 project">
+            <div class="row name no-gutters">
+                <div class="col-12 project-name">
+                    <h4>{{ project.project_name }}</h4>
+                </div>
+            </div>
+            <div class="row preview no-gutters">
+                <div class="col-12 project-icon hover-show">
+                    <p>{{ project.description }}</p>
+                    <img class="img-fluid" src="{{ project.img.url }}"></img>
+                </div>
+            </div>
+            <div class="row project-link no-gutters">
+                <div class="col-12 links">
+                    {% if project.project_name == "Coming Soon" %}
+                        <a href="https://github.com/jeeej/">
+                        <button class="btn btn-danger btn-source" type="button">See Source Code</button></a>
+                    {% else %}
+                        <a href="https://github.com/jeeej/{{ project.project_name }}">
+                            <button class="btn btn-danger btn-source" type="button">See Source Code</button>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
