@@ -65,9 +65,6 @@ li {
     text-align: justify;
     word-wrap: break-word;
 }
-.img-link {
-    padding: 1%;
-}
 
 .img-link>img {
     object-fit: scale-down;
