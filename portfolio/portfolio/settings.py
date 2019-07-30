@@ -25,7 +25,7 @@ SECRET_KEY = ')-%4seit0q=-x2a-59^6b^p2dp51uptjrt_1#8i)c^9woe0*xf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Jprevotat.eu.pythonanywhere.com',]
 
 
 # Application definition
