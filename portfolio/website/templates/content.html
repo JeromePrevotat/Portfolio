@@ -33,16 +33,60 @@
 ---- MIDDLE PART
 --->
     <h3>Compétences :</h3>
-    <div class="mx-auto categorie">
-        <p>blabla</p>
+    <div id="custom-list-skills" class="row mx-auto categorie">
+        <div class="col-4 container">
+            <h5>Général :</h5>
+            <ul class="list-unstyled">
+                <li>HTML/CSS</li>
+                <li>Javascript</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>C</li>
+            </ul>
+        </div>
+        <div class="col-4 container">
+            <h5>Frameworks :</h5>
+            <ul class="list-unstyled">
+                <li>Django</li>
+            </ul>
+        </div>
+        <div class="col-4 container">
+            <h5>Divers :</h5>
+            <ul class="list-unstyled">
+                <li>Unix</li>
+                <li>Git</li>
+            </ul>
+        </div>
     </div>
 
 <!--
 ---- MIDDLE PART 2
 --->
     <h3>Expérience :</h3>
-    <div class="mx-auto categorie">
-        <p>blabla</p>
+    <div id="custom-list-skills-2" class="mx-auto row categorie horizontal-list-container">
+        <div class="col-4 project">
+            <div class="row">
+                <div class="col-12 project-name">
+                    <p>TEST</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-8 project-icon">
+                    <img class="img-fluid" src="{% static 'img/communication-icon.png' %}"></img>
+                </div>
+                <div class="col-4 project-skills">
+                    <h6>Skills :</h6>
+                    <ul class="list-unstyled">
+                        <li>Sockets</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row project-link">
+                <div class="col-12">
+                    <button class="btn btn-danger btn-source" type="button">See Source Code</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 <!--
