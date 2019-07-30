@@ -65,9 +65,11 @@ li {
     text-align: justify;
     word-wrap: break-word;
 }
+.img-link {
+    padding: 1%;
+}
 
 .img-link>img {
-    padding: 1%;
     object-fit: scale-down;
     height: 100%;
     max-height: 40px;
