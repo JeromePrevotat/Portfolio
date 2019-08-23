@@ -22,21 +22,23 @@
             </p>
         </div>
         <div class="col-2 align-self-end">
-            <div class="row">
-                <div class="col-6">
+            <div id="github" class="row">
+                <div class="col-12">
                     <a class="img-link" href="https://github.com/jeeej">
-                        <img class="img-fluid" src="{% static 'buttons/github-icon.png' %}"/>
+                        <img class=" test img-fluid" src="{% static 'website/buttons/github-icon.png' %}"/>
                     </a>
                 </div>
-                <div class="col-3">
+            </div>
+            <div id="linkedin-pdf" class="row">
+                <div class="col-6">
                     <a class="img-link" href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-pr%C3%A9votat-656165158/">
-                        <img class="img-fluid" src="{% static 'buttons/linkedin-icon.png' %}"/>
+                        <img class="img-fluid" src="{% static 'website/buttons/linkedin-icon.png' %}"/>
                     </a>
                 </div>
-                <div class="col-3">
+                <div class="col-6">
                     <!--><a class="img-link" href="{% static 'CV_Prevotat_Jerome.pdf' %}"-->
-                    <a class="img-link" href="{% static '/files/CV_Prevotat_Jerome.pdf' %}">
-                        <img class="img-fluid" src="{% static 'buttons/pdf-icon.png' %}"/>
+                    <a class="img-link" href="{% static '/website/files/CV_Prevotat_Jerome.pdf' %}">
+                        <img class="img-fluid" src="{% static 'website/buttons/pdf-icon.png' %}"/>
                     </a>
                 </div>
             </div>
@@ -96,5 +98,4 @@
         </div>
     </div>
 </div>
-<script src="script.js"></script>
 {% endblock %}
