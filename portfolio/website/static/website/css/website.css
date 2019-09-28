@@ -38,6 +38,7 @@ h4 {
 
 h5 {
     font-weight: bolder;
+    padding-top: 1%;
 }
 
 p {
@@ -99,11 +100,6 @@ li {
     margin-left: 2%;
 }
 
-h5 {
-    padding-top: 1%;
-}
-
-
 /***********************************************
 *                   MIDDLE PART 2              *
 ***********************************************/
@@ -146,18 +142,14 @@ h5 {
     text-align: center;
 }
 
-.project-icon {
+.project-icon-container {
     height: 100%;
     border-radius: 100%;
     border: solid 2px;
     background-size: contain;
 }
 
-.project-icon:hover {
-    transform: scale(2,2);
-}
-
-.project-icon>img {
+.project-icon-container>img {
     height: 100%;
     width: 100%;
     border-radius: 100%;
