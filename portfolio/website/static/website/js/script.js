@@ -8,7 +8,8 @@ let init, dom_strings;
     let build_modal = function(event){
         //Get project infos
         let project_infos;
-        project_infos = event.target.parentNode.parentNode.parentNode.childNodes;
+        project_infos = event.target.parentNode.parentNode.parentNode.parentNode.childNodes;
+        console.log(project_infos);
         //Update modal infos with project infos
         $('#project-modal').on('show.bs.modal', function (event) {
             var modal = $(this)

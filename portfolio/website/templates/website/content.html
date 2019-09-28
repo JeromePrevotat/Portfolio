@@ -1,6 +1,10 @@
 {% extends 'website/index.html' %}
 {% load staticfiles %}
 
+<!--------------------------------------------------------------------------------------------------
+---- MODAL
+--------------------------------------------------------------------------------------------------->
+
 {% block modal_block %}
 <div class="modal" id="project-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -18,6 +22,11 @@
     </div>
 </div>
 {% endblock %}
+
+
+<!--------------------------------------------------------------------------------------------------
+---- BODY BLOCK
+--------------------------------------------------------------------------------------------------->
 
 {% block body_block %}
 <h1 class="display-3">Prévotat Jérôme</h1>
@@ -98,7 +107,7 @@
 ---- MIDDLE PART 2
 --------------------------------------------------------------------------------------------------->
     <h3>Expérience :</h3>
-    <div id="custom-list-skills-2" class="row categorie projects-container">
+    <div id="custom-list-skills-2" class="row categorie projects-container flex">
         {% block project_block%}
         {% endblock %}
     </div>

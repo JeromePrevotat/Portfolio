@@ -119,72 +119,52 @@ li {
 }
 
 .project {
-    margin: 1%;
+    margin: 2%;
+    height: 40vh;
+    width: 40vh;
+    box-sizing: border-box;
+
 }
 
 .name {
     height: 10%;
+    width: 100%;
     margin: 1%;
 }
 
 .preview {
     height: 75%;
+    width: auto;
     margin: 1%;
+
 }
 
 .project-link {
     height: 15%;
+    width: auto;
     margin: 1%;
 }
 
 .project-name {
     height: 100%;
+    width: auto;
     text-align: center;
 }
 
 .project-icon-container {
-    height: 100%;
-    border-radius: 100%;
-    border: solid 2px;
-    background-size: contain;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.project-icon-container>img {
-    height: 100%;
-    width: 100%;
-    border-radius: 100%;
-}
-
-.description {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    opacity: 0;
-}
-
-.hover-show:hover{
-    z-index: 100;
-}
-
-.hover-show:hover p{
-    width: 75%;
-    font-weight: bolder;
-    font-size: 10px;
-    opacity: 1;
-    margin: 1%;
-}
-
-.hover-show img {
-    opacity: 1;
-}
-
-.hover-show:hover img{
-    opacity: 0.0;
-}
-.hover-show:hover {
-    background-color: rgba(255,255,255,0.7);
+.project-icon {
+    margin: auto;
+    width: 30vh;
+    height: 30vh;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    border: solid black 2px;
 }
 
 .links {
@@ -198,4 +178,5 @@ li {
 .btn-source {
     width: 90%;
     height: 85%;
+    overflow: hidden;
 }
