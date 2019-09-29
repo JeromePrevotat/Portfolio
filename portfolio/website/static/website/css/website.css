@@ -116,6 +116,8 @@ li {
     border-radius: 10px;
     border-style: solid;
     border-width: 2px;
+    box-sizing: border-box;
+    justify-content: center;
 }
 
 .project {
@@ -123,7 +125,6 @@ li {
     height: 40vh;
     width: 40vh;
     box-sizing: border-box;
-
 }
 
 .name {
