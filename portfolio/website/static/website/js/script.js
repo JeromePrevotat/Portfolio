@@ -16,6 +16,7 @@ let init, dom_strings;
             modal.find(".modal-title").text(project_infos[1].textContent.trim());
             modal.find(".modal-description").text(project_infos[3].textContent.trim());
         })
+        console.log(project_infos[3].textContent.trim());
         //Display modal
         $(document.querySelectorAll(".modal")).modal();
     };
