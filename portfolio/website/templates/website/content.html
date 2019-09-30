@@ -37,8 +37,8 @@
 --------------------------------------------------------------------------------------------------->
 <div class="container-fluid">
     <h3>Contact :</h3>
-    <div class="row mx-auto categorie">
-        <div class="col-4">
+    <div class="row mx-auto categorie flex">
+        <div class="col-4 top-text">
             <p class="top-text">Téléphone : 06.69.01.99.71
                 <br>Email : jer.prevotat@gmail.com
             </p>
@@ -49,26 +49,17 @@
                 <br>75017 Paris
             </p>
         </div>
-        <div class="col-2 align-self-end">
-            <div id="github" class="row">
-                <div class="col-12">
-                    <a class="img-link" href="https://github.com/jeeej">
-                        <img class=" test img-fluid" src="{% static 'website/buttons/github-icon.png' %}"/>
-                    </a>
-                </div>
-            </div>
-            <div id="linkedin-pdf" class="row">
-                <div class="col-6">
-                    <a class="img-link" href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-pr%C3%A9votat-656165158/">
-                        <img class="img-fluid" src="{% static 'website/buttons/linkedin-icon.png' %}"/>
-                    </a>
-                </div>
-                <div class="col-6">
-                    <!--><a class="img-link" href="{% static 'CV_Prevotat_Jerome.pdf' %}"-->
-                    <a class="img-link" href="{% static '/website/files/CV_Prevotat_Jerome.pdf' %}">
-                        <img class="img-fluid" src="{% static 'website/buttons/pdf-icon.png' %}"/>
-                    </a>
-                </div>
+        <div class="row mx-auto contact-icons-container">
+            <div class="col-12">
+                <a class="img-link" href="https://github.com/jeeej">
+                    <img class="img-fluid" src="{% static 'website/buttons/github-icon.png' %}"/>
+                </a>
+                <a class="img-link-square" href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-pr%C3%A9votat-656165158/">
+                    <img class="img-fluid" src="{% static 'website/buttons/linkedin-icon.png' %}"/>
+                </a>
+                <a class="img-link-square" href="">
+                    <img class="img-fluid" src="{% static 'website/buttons/pdf-icon.png' %}"/>
+                </a>
             </div>
         </div>
     </div>
