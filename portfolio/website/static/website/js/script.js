@@ -1,44 +1,25 @@
 let init, dom_strings;
 {
     dom_strings = {
-        btn_source_code: ".btn-source",
-        top_text: ".top-text"
+        modal_toggler: ".modal-toggler",
     };
 
-    let redirect = function(event){
-        let childs, project_name, redirect_to;
-        childs = event.target.parentNode.parentNode.childNodes;
-        project_name = childs[1].textContent.trim();
-        redirect_to = `https://github.com/jeeej/${project_name}`;
-        console.log(redirect_to);
-        if(window.location.href == 'https://jeeej.github.io' || window.location.href == `file:///home/jeeej/Portfolio/index.html`){
-            console.log('IF');
-            window.location.href=redirect_to;
-        }
+    let build_modal = function(project_name, project_description, event){
+        //Update modal infos with project infos
+        $('#project-modal').on('show.bs.modal', function (event) {
+            document.querySelector(".modal-title").textContent = project_name;
+            document.querySelector(".modal-description").textContent = project_description;
+        })
     };
+
     let setup_event_listener = function(){
-        let download_buttons;
-        download_buttons = document.querySelectorAll(dom_strings.btn_source_code);
-        for (let i = 0; i < download_buttons.length; i++){
-            download_buttons[i].addEventListener('click', redirect);
-        }
+        let all_projects = document.querySelectorAll(dom_strings.modal_toggler);
+        for (let i = 0; i < all_projects.length; i++){
+            all_projects[i].addEventListener("click", build_modal.bind(null, all_projects[i].dataset.name, all_projects[i].dataset.description), false);
+        };
     };
-    let init_text = function(){
-        let text;
-        text = "Yolooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo" +
-        "oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo";
-        document.querySelector(dom_strings.top_text).insertAdjacentHTML('beforeend', text);
-    };
+
     init = function(){
-        init_text();
         setup_event_listener();
     };
 }

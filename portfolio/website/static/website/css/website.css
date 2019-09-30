@@ -3,9 +3,6 @@
 ***********************************************/
 {% load staticfiles %}
 
-body {
-    height: 100vh;
-}
 
 * {
     font-family: 'Open Sans', sans-serif;
@@ -38,6 +35,7 @@ h4 {
 
 h5 {
     font-weight: bolder;
+    padding-top: 1%;
 }
 
 p {
@@ -65,26 +63,27 @@ li {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#top-text {
-    text-align: justify;
+.top-text {
     word-wrap: break-word;
 }
 
-#github {
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
-
-#linkedin-pdf {
-    padding-top: 1%;
-    padding-bottom: 1%;
+.contact-icons-container{
+    width: 33%;
 }
 
 .img-link>img {
-    object-fit: scale-down;
-    height: 100%;
-    max-height: 60px;
+    margin: 0 2%;
+    max-width: 200px;
+    height: 2em;
 }
+
+.img-link-square>img {
+    margin: 0 2%;
+    height: 100%;
+    max-width: 2em;
+    max-height: 2em;
+}
+
 
 /***********************************************
 *                   MIDDLE PART 1              *
@@ -99,11 +98,6 @@ li {
     margin-left: 2%;
 }
 
-h5 {
-    padding-top: 1%;
-}
-
-
 /***********************************************
 *                   MIDDLE PART 2              *
 ***********************************************/
@@ -112,103 +106,94 @@ h5 {
     content: "- ";
 }
 
-.horizontal-list-container {
+.projects-container {
     background-color: rgba(0, 0, 0, 0.2);
     width: 98%;
     margin-left: 1%;
     margin-right: 1%;
-    list-style-type: none;
     border-radius: 10px;
     border-style: solid;
     border-width: 2px;
-    border-bottom: hidden;
-
+    box-sizing: border-box;
     display: inline-flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: scroll;
+    justify-content: center;
 }
-
-.horizontal-list-container::-webkit-scrollbar {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    border-style: solid;
-    border-width: 1px;
-    height: 8px;
-}
-.horizontal-list-container::-webkit-scrollbar-button {
-    width: 0;
-}
-.horizontal-list-container::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-}
-.horizontal-list-container::-webkit-scrollbar-track-piece {}
-.horizontal-list-container::-webkit-scrollbar-track {}
-.horizontal-list-container::-webkit-scrollbar-corner {}
-.horizontal-list-container::-webkit-resizer {}
-
 
 .project {
-    margin: 1%;
-    border: solid 1px;
+    margin: 2%;
+    min-width: 250px;
+    width: 20%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .name {
-    border: solid 1px;
-    height: 10%;
-}
-
-.preview {
-    height: 75%;
-}
-
-.project-link {
-    border: solid 1px;
-    height: 15%;
+    width: 100%;
+    margin: 1% 0;
 }
 
 .project-name {
-    height: 100%;
     text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.project-icon {
-    height: 100%;
-    border: solid 1px;
-}
 
-.project-icon>img {
-    width: 100%;
-    height: 100%;
-    max-height: 100%;
-}
-
-.hover-show p {
-    position: absolute;
-    opacity: 0;
-}
-.hover-show:hover p{
-    font-weight: bolder;
-    opacity: 1;
+.preview {
+    width: auto;
     margin: 1%;
 }
 
-.hover-show img {
-    opacity: 1;
+.project-icon-container {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
-.hover-show:hover img{
-    opacity: 0.1;
+
+.modal-toggler {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.project-icon {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid black 2px;
+}
+
+.project-icon:hover {
+    cursor: crosshair;
+    opacity: 0.5;
+}
+
+.project-link {
+    width: 100%;
+    margin: 1% 0;
 }
 
 .links {
     width: 100%;
     height: 100%;
     text-align: center;
-    padding-top: 2%;
+    margin: 1%;
+    padding-top: 1%;
 }
 
 .btn-source {
     width: 90%;
     height: 85%;
+    overflow: hidden;
 }
+
+
+/***********************************************
+*                   MODAL                      *
+***********************************************/

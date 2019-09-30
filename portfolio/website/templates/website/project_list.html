@@ -2,18 +2,23 @@
 {% load staticfiles %}
 {% block project_block %}
     {% for project in project_list %}
-        <div class="col-4 project">
-            <div class="row name no-gutters">
+        <div class="project">
+            <div class="row name">
                 <div class="col-12 project-name">
                     <h4>{{ project.project_name }}</h4>
                 </div>
             </div>
+
             <div class="row preview no-gutters">
-                <div class="col-12 project-icon hover-show">
-                    <p>{{ project.description }}</p>
-                    <img class="img-fluid" src="{{ project.img.url }}"></img>
+                <div class="col-12">
+                    <div class="container project-icon-container">
+                        <a class="modal-toggler" data-toggle="modal" data-target="#project-modal" data-name="{{ project.project_name }}" data-description="{{ project.description }}">
+                            <img class="project-icon" src="{{ project.img.url }}" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
+
             <div class="row project-link no-gutters">
                 <div class="col-12 links">
                     {% if project.project_name == "Coming Soon" %}

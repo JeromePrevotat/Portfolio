@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#TEMPLATES_DIR = os.path.join(BASE_DIR, 'website/templates/website')
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 # Static files (CSS, JavaScript, Images)
@@ -29,12 +30,13 @@ LOGIN_REDIRECT_URL = ''
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+#SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = ')-%4seit0q=-x2a-59^6b^p2dp51uptjrt_1#8i)c^9woe0*xf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['Jprevotat.eu.pythonanywhere.com',]
+ALLOWED_HOSTS = ['Jprevotat.eu.pythonanywhere.com','127.0.0.1',]
 
 
 # Application definition
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'risk',
 ]
 
 MIDDLEWARE = [

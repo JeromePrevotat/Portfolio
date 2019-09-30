@@ -1,46 +1,65 @@
 {% extends 'website/index.html' %}
 {% load staticfiles %}
-{% block body_block %}
 
+<!--------------------------------------------------------------------------------------------------
+---- MODAL
+--------------------------------------------------------------------------------------------------->
+
+{% block modal_block %}
+<div class="modal" id="project-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-notified fg-info" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-info">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-description">Modal body text goes here.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+<!--------------------------------------------------------------------------------------------------
+---- BODY BLOCK
+--------------------------------------------------------------------------------------------------->
+
+{% block body_block %}
 <h1 class="display-3">Prévotat Jérôme</h1>
+
 
 <!--------------------------------------------------------------------------------------------------
 ---- TOP PART
 --------------------------------------------------------------------------------------------------->
 <div class="container-fluid">
     <h3>Contact :</h3>
-    <div class="row mx-auto categorie">
-        <div class="col-5">
+    <div class="row mx-auto categorie flex">
+        <div class="col-4 top-text">
             <p class="top-text">Téléphone : 06.69.01.99.71
                 <br>Email : jer.prevotat@gmail.com
             </p>
         </div>
-        <div class="col-5">
+        <div class="col-4">
             <p class="top-text">Adresse Postale :
                 <br>131 Ter Avenue de Clichy
                 <br>75017 Paris
             </p>
         </div>
-        <div class="col-2 align-self-end">
-            <div id="github" class="row">
-                <div class="col-12">
-                    <a class="img-link" href="https://github.com/jeeej">
-                        <img class=" test img-fluid" src="{% static 'website/buttons/github-icon.png' %}"/>
-                    </a>
-                </div>
-            </div>
-            <div id="linkedin-pdf" class="row">
-                <div class="col-6">
-                    <a class="img-link" href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-pr%C3%A9votat-656165158/">
-                        <img class="img-fluid" src="{% static 'website/buttons/linkedin-icon.png' %}"/>
-                    </a>
-                </div>
-                <div class="col-6">
-                    <!--><a class="img-link" href="{% static 'CV_Prevotat_Jerome.pdf' %}"-->
-                    <a class="img-link" href="{% static '/website/files/CV_Prevotat_Jerome.pdf' %}">
-                        <img class="img-fluid" src="{% static 'website/buttons/pdf-icon.png' %}"/>
-                    </a>
-                </div>
+        <div class="row mx-auto contact-icons-container">
+            <div class="col-12">
+                <a class="img-link" href="https://github.com/jeeej">
+                    <img class="img-fluid" src="{% static 'website/buttons/github-icon.png' %}"/>
+                </a>
+                <a class="img-link-square" href="https://www.linkedin.com/in/j%C3%A9r%C3%B4me-pr%C3%A9votat-656165158/">
+                    <img class="img-fluid" src="{% static 'website/buttons/linkedin-icon.png' %}"/>
+                </a>
+                <a class="img-link-square" href="">
+                    <img class="img-fluid" src="{% static 'website/buttons/pdf-icon.png' %}"/>
+                </a>
             </div>
         </div>
     </div>
@@ -80,7 +99,7 @@
 ---- MIDDLE PART 2
 --------------------------------------------------------------------------------------------------->
     <h3>Expérience :</h3>
-    <div id="custom-list-skills-2" class="row categorie horizontal-list-container no-gutters">
+    <div id="custom-list-skills-2" class="row categorie projects-container flex">
         {% block project_block%}
         {% endblock %}
     </div>
@@ -90,12 +109,13 @@
 --------------------------------------------------------------------------------------------------->
     <h3>Études :</h3>
     <div class="row mx-auto categorie">
-        <div class="col-6 container">
+        <div class="col-4 container">
             <p>Bac Scientifique Spé Maths <br> Lycée Saint Cyr <br> 58000 Nevers</p>
         </div>
-        <div class="col-6 container">
+        <div class="col-4 container">
             <p>42 Born to Code <br> 75017 Paris</p>
         </div>
+        <div class="col-4"></div>
     </div>
 </div>
 {% endblock %}
