@@ -1,0 +1,75 @@
+/*
+* GENERAL
+*/
+
+h1 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+/*
+* MAP PART
+*/
+
+.map {
+    width:100%;
+    max-height: 70vh;
+}
+
+
+/*
+* REINFORCEMENT
+*/
+
+.reinforcement-container {
+    box-sizing: border-box;
+    background-color: blue;
+    justify-content: center;
+    text-align: center;
+}
+
+#country-reinforcement-select {
+     width: 15em;
+     max-width: 100%;
+     margin: 1%;
+}
+
+#reinforcement-value-select {
+    width: 5em;
+    max-width: 100%;
+    max-height: 2em;
+    margin: 1%;
+}
+
+#reinforcement-done-button {
+    width:80%
+}
+
+.test {
+    background-color: yellow;
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+/*
+* ATTACK
+*/
+
+.attack-container {
+    background-color: red;
+}
+
+
+/*
+* MOVE
+*/
+
+.move-container {
+    background-color: green;
+}

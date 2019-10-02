@@ -6,4 +6,4 @@ from django.views.generic import View, TemplateView
 APPNAME = 'risk/'
 
 class Risk(TemplateView):
-    template_name = APPNAME + 'risk.html'
+    template_name = APPNAME + 'risk_body.html'

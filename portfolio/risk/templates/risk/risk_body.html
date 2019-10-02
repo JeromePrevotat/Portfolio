@@ -1,0 +1,45 @@
+{% extends 'risk/risk.html' %}
+{% load staticfiles %}
+{% block body_block %}
+
+<div class="map-container">
+    <img class="map" src="{% static 'risk/img/map.jpg' %}" alt="">
+</div>
+<div class="row no-gutters">
+    <div class="col-4 reinforcement-container">
+        <h1>Phase 1 : Reinforcement</h1>
+        <div class="container test">
+            <p>Reinforce :</p>
+            <select id="country-reinforcement-select">
+                <option value="a">A</option>
+                <option value="b">B</option>
+            </select>
+        </div>
+            <p>with :</p>
+            <select id="reinforcement-value-select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+            <p>Troops.</p>
+        <button class="btn btn-success" id="reinforcement-done-button" type="button" name="reinforcement-done">Done</button>
+    </div>
+    <div class="col-4 attack-container">
+        <h1>Phase 2 : Attack</h1>
+        <p>Reinforce :</p>
+        <select id="country-reinforcement-select">
+            <option value="a">A</option>
+            <option value="b">B</option>
+        </select>
+        <p>with :</p>
+        <select id="reinforcement-value-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <p>Troops.</p>
+    </div>
+    <div class="col-4 move-container">
+    </div>
+</div>
+
+
+{% endblock %}
