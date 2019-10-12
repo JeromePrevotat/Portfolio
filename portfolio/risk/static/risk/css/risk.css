@@ -24,12 +24,14 @@ p {
 /*
 * REINFORCEMENT
 */
-
-.reinforcement-container {
+#reinforcement-container {
     box-sizing: border-box;
-    background-color: blue;
-    justify-content: center;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: solid cyan 5px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 #country-reinforcement-select {
@@ -46,23 +48,19 @@ p {
 }
 
 #reinforcement-done-button {
-    width:80%
+    width:80%;
+    margin: auto;
 }
 
-.test {
-    background-color: yellow;
-    margin: 1%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-}
 
 /*
 * ATTACK
 */
 
-.attack-container {
+#attack-container {
     background-color: red;
+    border: solid white 5px;
+    border-radius: 5%;
 }
 
 
@@ -70,6 +68,8 @@ p {
 * MOVE
 */
 
-.move-container {
+#move-container {
     background-color: green;
+    border: solid white 5px;
+    border-radius: 5%;
 }

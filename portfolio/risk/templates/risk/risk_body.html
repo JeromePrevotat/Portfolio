@@ -6,24 +6,30 @@
     <img class="map" src="{% static 'risk/img/map.jpg' %}" alt="">
 </div>
 <div class="row no-gutters">
-    <div class="col-4 reinforcement-container">
+    <div id="reinforcement-container" class="col-4 container phase-container">
         <h1>Phase 1 : Reinforcement</h1>
-        <div class="container test">
-            <p>Reinforce :</p>
-            <select id="country-reinforcement-select">
-                <option value="a">A</option>
-                <option value="b">B</option>
-            </select>
-        </div>
-            <p>with :</p>
-            <select id="reinforcement-value-select">
-                <option value="1">1</option>
-                <option value="2">2</option>
-            </select>
-            <p>Troops.</p>
-        <button class="btn btn-success" id="reinforcement-done-button" type="button" name="reinforcement-done">Done</button>
+        <form>
+            <div class="form-group row">
+                <label class ="col-form-label col-5" for="country-reinforcement-select">Reinforce :</label>
+                <select id="country-reinforcement-select" class="form-control col-5">
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-3" for="reinforcement-value-select">with :</label>
+                <select id="reinforcement-value-select" class="form-control col-5">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <label class="col-form-label col-3" for="reinforcement-value-select">Troops.</label>
+            </div>
+            <div class="form-group row">
+                <button class="btn btn-success" id="reinforcement-done-button" type="button" name="reinforcement-done">Done</button>
+            </div>
+        </form>
     </div>
-    <div class="col-4 attack-container">
+    <div id="attack-container" class="col-4 phase-container">
         <h1>Phase 2 : Attack</h1>
         <p>Reinforce :</p>
         <select id="country-reinforcement-select">
@@ -37,7 +43,7 @@
         </select>
         <p>Troops.</p>
     </div>
-    <div class="col-4 move-container">
+    <div id="move-container" class="col-4 phase-container">
     </div>
 </div>
 
