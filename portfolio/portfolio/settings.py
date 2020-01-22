@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 #SECRET_KEY = ')-%4seit0q=-x2a-59^6b^p2dp51uptjrt_1#8i)c^9woe0*xf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['Jprevotat.eu.pythonanywhere.com','127.0.0.1',]
 
