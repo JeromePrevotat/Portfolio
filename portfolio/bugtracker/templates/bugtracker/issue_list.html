@@ -1,0 +1,11 @@
+{% extends 'bugtracker/index.html' %}
+{% load static %}
+{% block issue_block %}
+    {% for issue in issue_list %}
+    <tr>
+        <td>{{ issue.issue_status }}</td>
+        <td>{{ issue.issue_title }}</td>
+        <td>{{ issue.issue_description }}</td>
+    </tr>
+    {% endfor %}
+{% endblock %}

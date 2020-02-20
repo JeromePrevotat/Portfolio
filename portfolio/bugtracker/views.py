@@ -1,12 +1,15 @@
 from django.shortcuts import render, redirect
-from django.views.generic import View
+from django.views.generic import View, ListView
 
 from .forms import IssueForm
+from .models import Issue
 
 # Create your views here.
 
-def index_view(request):
-    return render(request, 'bugtracker/index.html')
+class Issue_ListView(ListView):
+    model = Issue
+    def get_queryset(self):
+        return Issue.objects.all()
 
 class Report_Issue(View):
     form_class = IssueForm
