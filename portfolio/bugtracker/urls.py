@@ -17,5 +17,6 @@ from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
-    path('bugtracker/', views.index_view),
+    path('bugtracker/', views.index_view, name='bugtracker-index'),
+    path('bugtracker/report-issue', views.Report_Issue.as_view(), name='report-issue'),
 ]

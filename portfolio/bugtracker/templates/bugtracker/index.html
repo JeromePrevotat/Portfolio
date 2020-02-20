@@ -20,7 +20,8 @@
                     <div class="card mb-4">
                         <div class="card-header"><i class="fas fa-table mr-1"></i>Known Issues</div>
                         <div class="card-body">
-                            <button type="button" name="report-button" class="btn btn-danger">Report a new Issue</button>
+                            <a href="{% url 'report-issue' %}">
+                            <button type="button" name="report-button" class="btn btn-danger">Report a new Issue</button></a>
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
