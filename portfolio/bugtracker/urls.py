@@ -18,5 +18,6 @@ from . import views
 
 urlpatterns = [
     path('bugtracker/', views.Issue_ListView.as_view(), name='bugtracker-index'),
+    path('bugtracker/login', views.Login_Page.as_view(), name='login-page'),
     path('bugtracker/report-issue', views.Report_Issue.as_view(), name='report-issue'),
 ]
