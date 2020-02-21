@@ -1,9 +1,14 @@
-{% extends 'bugtracker/index.html' %}
+{% extends 'bugtracker/issue_table.html' %}
 {% load static %}
 {% block issue_block %}
     {% for issue in issue_list %}
     <tr>
         <td>{{ issue.issue_status }}</td>
+        {% for key,value in issue.SEVERITY_CHOICES %}
+            {% if issue.issue_severity == key %}
+                <td>{{ value }}</td>
+            {% endif %}
+        {% endfor %}
         <td>{{ issue.issue_title }}</td>
         <td>{{ issue.issue_description }}</td>
         <td>{{ issue.issue_created }}</td>

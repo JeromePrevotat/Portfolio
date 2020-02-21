@@ -17,44 +17,8 @@
             <main>
                 <div class="container-fluid">
                     <h1 class="mt-4">Bug Tracker</h1>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table mr-1"></i>Known Issues
-                        </div>
-                        <div class="card-body">
-                            <a href="{% url 'report-issue' %}">
-                            <button type="button" name="report-button" class="btn btn-danger">Report a new Issue</button></a>
-                            <a href="{% url 'login-page' %}">
-                                <button type="button" name="log-btn" class="btn btn-primary">Log In</button>
-                            </a>
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Status</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Created</th>
-                                            <th>Last Updated</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Status</th>
-                                            <th>Title</th>
-                                            <th>Description</th>
-                                            <th>Created</th>
-                                            <th>Last Updated</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        {% block issue_block %}
-                                        {% endblock %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
+                    {% block content %}
+                    {% endblock %}
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">

@@ -1,4 +1,4 @@
-"""bugtracker URL Configuration
+"""register URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -11,14 +11,11 @@ Class-based views
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('website/', include('bugtracker.urls'))
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, re_path
-from register import views as register_views
-from . import views as bugtracker_views
+from . import views
 
 urlpatterns = [
-    path('bugtracker/', bugtracker_views.Issue_ListView.as_view(), name='bugtracker-index'),
-    path('bugtracker/report-issue', bugtracker_views.Report_Issue.as_view(), name='report-issue'),
-    path('bugtracker/register', register_views.register, name='register'),
+    path('register/', views.register, name='register'),
 ]
