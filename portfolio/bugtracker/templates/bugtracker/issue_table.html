@@ -8,9 +8,15 @@
         <div class="card-body">
             <a href="{% url 'report-issue' %}">
             <button type="button" name="report-button" class="btn btn-danger">Report a new Issue</button></a>
-            <a href="{% url 'register' %}">
-                <button type="button" name="log-btn" class="btn btn-primary">Log In</button>
-            </a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'bugtracker-logout' %}">
+                    <button type="button" name="log-btn" class="btn btn-warning">Log Out</button>
+                </a>
+            {% else %}
+                <a href="{% url 'bugtracker-login' %}">
+                    <button type="button" name="log-btn" class="btn btn-primary">Log In</button>
+                </a>
+            {% endif %}
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>

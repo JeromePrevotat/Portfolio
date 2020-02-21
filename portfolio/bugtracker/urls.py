@@ -13,12 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('website/', include('bugtracker.urls'))
 """
-from django.urls import path, re_path
+from django.contrib.auth import views as auth_views
+from django.urls import path, re_path, include
 from register import views as register_views
 from . import views as bugtracker_views
+
 
 urlpatterns = [
     path('bugtracker/', bugtracker_views.Issue_ListView.as_view(), name='bugtracker-index'),
     path('bugtracker/report-issue', bugtracker_views.Report_Issue.as_view(), name='report-issue'),
-    path('bugtracker/register', register_views.register, name='register'),
+    path('bugtracker/register', register_views.register, name='bugtracker-register'),
+    path('bugtracker/login', auth_views.LoginView.as_view(extra_context={'next':'/bugtracker'}), name="bugtracker-login"),
+    path('bugtracker/logout', auth_views.LogoutView.as_view(next_page='/bugtracker'), name="bugtracker-logout"),
+    #path('bugtracker/pwd_reset', auth_views.PasswordResetView.as_view()),
 ]
