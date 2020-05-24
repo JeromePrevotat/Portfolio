@@ -1,5 +1,5 @@
 from django import forms
-from bugtracker.models import Issue, User
+from bugtracker.models import Issue, Bugtracker_User
 
 class IssueForm(forms.ModelForm):
     class Meta():
@@ -20,7 +20,7 @@ class IssueForm(forms.ModelForm):
 
 class UserForm(forms.ModelForm):
     class Meta():
-        model = User
+        model = Bugtracker_User
         fields = ('username', 'password')
         widgets = {
             'username':forms.TextInput(attrs={'class':'textinputclass'}),
