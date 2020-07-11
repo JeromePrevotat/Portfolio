@@ -99,7 +99,9 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
-AUTH_USER_MODEL = 'bugtracker.Bugtracker_User'
+#AUTH_USER_MODEL = 'bugtracker.Bugtracker_User'
+LOGIN_URL = 'bugtracker-login'
+LOGIN_REDIRECT_URL = 'bugtracker-index'
 
 AUTH_PASSWORD_VALIDATORS = [
     {

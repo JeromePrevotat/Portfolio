@@ -1,7 +1,5 @@
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import AbstractUser
-
 
 # Create your models here.
 class Issue(models.Model):
@@ -33,13 +31,13 @@ class Issue(models.Model):
         return self.issue_title
 
 #User Class
-class Bugtracker_User(AbstractUser):
-    username = models.CharField(max_length=20, verbose_name='Username', unique=True)
+class User(models.Model):
+    username = models.CharField(max_length=20, verbose_name='Username')
     password = models.CharField(max_length=255, verbose_name='Password')
     email = models.EmailField(verbose_name='Email')
 
     def add_user():
         self.save()
 
-    def __str__(self):
-        return self.username
+    def __str__():
+        pass

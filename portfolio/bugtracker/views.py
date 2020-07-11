@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views.generic import View, ListView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .forms import IssueForm, UserForm
 from .models import Issue
@@ -27,7 +28,7 @@ class Login_Page(View):
 
         return render(request, self.template_name, {'form': form})
 
-class Report_Issue(View):
+class Report_Issue(LoginRequiredMixin, View):
     form_class = IssueForm
     initial = {'key': 'value'}
     template_name = 'bugtracker/report_issue.html'
