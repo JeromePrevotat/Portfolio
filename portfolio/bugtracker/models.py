@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.contrib.auth.models import Group, Permission
 
 # Create your models here.
 class Issue(models.Model):
