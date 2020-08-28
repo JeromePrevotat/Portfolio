@@ -20,8 +20,8 @@ class Issue(models.Model):
     issue_url = models.URLField(verbose_name='URL*', null=True, blank=True)
     issue_expected = models.TextField(verbose_name='What was expected ?')
     issue_steps = models.TextField(verbose_name='Steps to reproduce')
-    issue_created = models.DateTimeField(auto_now_add=True)
-    issued_last_modified = models.DateTimeField(auto_now=True)
+    issue_created = models.DateField(auto_now_add=True)
+    issue_last_modified = models.DateField(auto_now=True)
     issue_proof = models.FileField(upload_to='', verbose_name='Visual Proof*', null=True, blank=True)
     issue_extra = models.TextField(verbose_name='Extra Informations*', null=True, blank=True)
 

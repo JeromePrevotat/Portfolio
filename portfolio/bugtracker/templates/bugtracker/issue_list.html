@@ -3,6 +3,7 @@
 {% block issue_block %}
     {% for issue in issue_list %}
     <tr>
+        <td>{{ issue.issue_project }}</td>
         <td>{{ issue.issue_status }}</td>
         {% for key,value in issue.SEVERITY_CHOICES %}
             {% if issue.issue_severity == key %}
