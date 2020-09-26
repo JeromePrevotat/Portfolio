@@ -3,7 +3,9 @@
 {% block content %}
     <div class="card mb-4">
         <div class="card-header">
-            <i class="fas fa-table mr-1"></i>Known Issues
+            <i class="fas fa-table mr-1"></i>
+            {% block filters_bar_block %}
+            {% endblock %}
         </div>
         <div class="card-body">
             <a href="{% url 'report-issue' %}">

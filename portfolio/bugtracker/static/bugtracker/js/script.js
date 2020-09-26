@@ -1,4 +1,5 @@
 function init(){
+  //Clickable Headers
   class SortableHeader{
     constructor(domElementId, colNumber, sortType){
       this.domElementId = domElementId;
@@ -11,14 +12,75 @@ function init(){
     }
   };
 
+  //Event Listenner
+  //Headers
   PROJECT_TH = new SortableHeader("thProject", 0, "TEXT");
   STATUS_TH = new SortableHeader("thStatus", 1, "TEXT");
   SEVERITY_TH = new SortableHeader("thSeverity", 2, "SEVERITY");
   CREATED_TH = new SortableHeader("thCreated", 5, "DATE");
   UPDATED_TH = new SortableHeader("thUpdated", 6, "DATE");
+
+  //Filters
+  var projectFilter, statusFilter, severityFilter;
+  projectFilter = document.getElementById("project-select");
+  statusFilter = document.getElementById("status-select");
+  severityFilter = document.getElementById("severity-select");
+
+  projectFilter.addEventListener("change", function(){
+    filterTable(
+      projectFilter.options[projectFilter.selectedIndex].text,
+      statusFilter.options[statusFilter.selectedIndex].text,
+      severityFilter.options[severityFilter.selectedIndex].text
+    )
+  });
+  statusFilter.addEventListener("change", function(){
+    filterTable(
+      projectFilter.options[projectFilter.selectedIndex].text,
+      statusFilter.options[statusFilter.selectedIndex].text,
+      severityFilter.options[severityFilter.selectedIndex].text
+    )
+  });
+  severityFilter.addEventListener("change", function(){
+    filterTable(
+      projectFilter.options[projectFilter.selectedIndex].text,
+      statusFilter.options[statusFilter.selectedIndex].text,
+      severityFilter.options[severityFilter.selectedIndex].text
+    )
+  });
+
 };
 
-init();
+function filterTable(byProject, byStatus, bySeverity){
+  var table = document.getElementById("dataTable");
+  var i = 1;
+
+  while (i < table.rows.length){
+    if (filterOutTableRow(table.rows[i], byProject, byStatus, bySeverity)){
+      table.rows[i].style.display = "none";
+    }
+    else{
+      table.rows[i].style.display = "table-row";
+    }
+    i++;
+  }
+}
+
+function filterOutTableRow(tRow, byProject, byStatus, bySeverity){
+  var f1, f2, f3;
+  f1 = 0;
+  f2 = 1;
+  f3 = 2;
+  if(byProject != "-- By Project --"){
+    if (tRow.cells[f1].innerText != byProject) return true;
+  }
+  if(byStatus != "-- By Status --"){
+    if (tRow.cells[f2].innerText != byStatus) return true;
+  }
+  if(bySeverity != "-- By Severity --"){
+    if (tRow.cells[f3].innerText != bySeverity) return true;
+  }
+  return false;
+}
 
 function sortTable(sortingCol, sortType){
     var table, rows, ordered, i, x, y, switchNeeded, switchMade = false;
@@ -91,3 +153,5 @@ function sortElements(element1, element2, sortType, order){
   }
   return false;
 }
+
+init();

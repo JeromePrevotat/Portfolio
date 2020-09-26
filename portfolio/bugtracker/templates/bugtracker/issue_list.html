@@ -1,5 +1,27 @@
 {% extends 'bugtracker/issue_table.html' %}
 {% load static %}
+
+{% block filters_bar_block %}
+  <p>Filter :</p>
+  <select id="project-select">
+    <option value="">-- By Project --</option>
+    <option value="Bugtracker">Bugtracker</option>
+  </select>
+  <select id="status-select">
+    <option value="">-- By Status --</option>
+    <option value="Unconfirmed">Unconfirmed</option>
+    <option value="Confirmed">Confirmed</option>
+    <option value="Resolved">Resolved</option>
+  </select>
+  <select id="severity-select">
+    <option value="">-- By Severity --</option>
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+    <option value="Critical">Critical</option>
+  </select>
+{% endblock %}
+
 {% block issue_block %}
     {% for issue in issue_list %}
     <tr>
