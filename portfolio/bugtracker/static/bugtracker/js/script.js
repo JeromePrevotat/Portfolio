@@ -15,7 +15,7 @@ function init(){
   //Event Listenner
   //Headers
   PROJECT_TH = new SortableHeader("thProject", 0, "TEXT");
-  STATUS_TH = new SortableHeader("thStatus", 1, "TEXT");
+  STATUS_TH = new SortableHeader("thStatus", 1, "STATUS");
   SEVERITY_TH = new SortableHeader("thSeverity", 2, "SEVERITY");
   CREATED_TH = new SortableHeader("thCreated", 5, "DATE");
   UPDATED_TH = new SortableHeader("thUpdated", 6, "DATE");
@@ -123,6 +123,23 @@ function sortElements(element1, element2, sortType, order){
     while(severityTable[i]){
       if (element1 == severityTable[i]) e1 = i;
       if (element2 == severityTable[i]) e2 = i;
+      i++;
+    }
+    if (order == "asc"){
+      if (e1 > e2) return true;
+    }
+    else if(order == "desc"){
+      if (e1 < e2) return true;
+    }
+    return false;
+  }
+  //Status Sorting
+  if (sortType == "STATUS"){
+    var statusTable = ["Unconfirmed", "Confirmed", "Resolved"],
+    i = 0, e1 = -1, e2 = -1
+    while(statusTable[i]){
+      if (element1 == statusTable[i]) e1 = i;
+      if (element2 == statusTable[i]) e2 = i;
       i++;
     }
     if (order == "asc"){
