@@ -10,6 +10,8 @@
         <div class="card-body">
             <a href="{% url 'report-issue' %}">
             <button type="button" name="report-button" class="btn btn-danger">Report a new Issue</button></a>
+            <a href="{% url 'new-project' %}">
+            <button type="button" name="report-button" class="btn btn-danger">Add a new Project</button></a>
             {% if user.is_authenticated %}
                 <a href="{% url 'bugtracker-logout' %}">
                     <button type="button" name="log-btn" class="btn btn-warning">Log Out</button>

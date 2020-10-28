@@ -1,5 +1,6 @@
 from django import forms
-from bugtracker.models import Issue, User
+from bugtracker.models import Issue, Project
+from django.contrib.auth.models import User
 
 class IssueForm(forms.ModelForm):
     class Meta():
@@ -26,4 +27,13 @@ class UserForm(forms.ModelForm):
             'username':forms.TextInput(attrs={'class':'textinputclass'}),
             'password':forms.PasswordInput(),
             'email':forms.EmailInput(),
+        }
+
+class ProjectForm(forms.ModelForm):
+    class Meta():
+        model = Project
+        fields = ('project_name', 'project_description')
+        widgets = {
+            'project_name':forms.TextInput(attrs={'class':'textinputclass'}),
+            'project_description':forms.Textarea(attrs={'class':'textinputclass'}),
         }

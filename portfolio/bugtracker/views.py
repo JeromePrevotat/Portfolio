@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.views.generic import View, ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .forms import IssueForm, UserForm
-from .models import Issue
+from .forms import IssueForm, UserForm, ProjectForm
+from .models import Issue, Project
 
 # Create your views here.
 
@@ -42,5 +42,23 @@ class Report_Issue(LoginRequiredMixin, View):
         if form.is_valid():
             form.save()
             return redirect('bugtracker-index')
-
         return render(request, self.template_name, {'form': form})
+
+class New_Project(LoginRequiredMixin, View):
+    form_class = ProjectForm
+    initial = {'key':'value'}
+    template_name = 'bugtracker/add_project.html'
+
+    def get(self, request, *args, **kwargs):
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form':form})
+
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.project_admin=request.user
+            print(request.user)
+            instance.save()
+            return redirect('bugtracker-index')
+        return render(request, self.template_name, {'form':form})

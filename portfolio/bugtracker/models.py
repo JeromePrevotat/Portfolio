@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from django.contrib.auth.models import Group, Permission
+from django.contrib.auth.models import Group, Permission, User
 
 # Create your models here.
 class Issue(models.Model):
@@ -31,14 +31,16 @@ class Issue(models.Model):
     def __str__(self):
         return self.issue_title
 
-#User Class
-class User(models.Model):
-    username = models.CharField(max_length=20, verbose_name='Username')
-    password = models.CharField(max_length=255, verbose_name='Password')
-    email = models.EmailField(verbose_name='Email')
 
-    def add_user():
+class Project(models.Model):
+    project_name = models.CharField(max_length=20, unique=True, verbose_name='Project Name', default='None')
+    project_admin = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Project Admin')
+    project_created = models.DateField(auto_now_add=True)
+    project_description = models.TextField(verbose_name='Description', null=True, blank=True)
+    #project_devs = USER_LIST
+    #project_issue = ISSUE_LIST
+    def add_project():
         self.save()
 
-    def __str__():
-        pass
+    def __str__(self):
+        return self.project_name
