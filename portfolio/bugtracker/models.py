@@ -2,7 +2,20 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import Group, Permission, User
 
-# Create your models here.
+# Create your models here
+class Project(models.Model):
+    project_name = models.CharField(max_length=20, unique=True, verbose_name='Project Name', default='None')
+    project_admin = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Project Admin')
+    project_created = models.DateField(auto_now_add=True)
+    project_description = models.TextField(verbose_name='Description', null=True, blank=True)
+    #project_devs = USER_LIST
+    #project_issue = ISSUE_LIST
+    def add_project():
+        self.save()
+
+    def __str__(self):
+        return self.project_name
+
 class Issue(models.Model):
     SEVERITY_CHOICES = [
         ('LO', 'Low'),
@@ -11,9 +24,10 @@ class Issue(models.Model):
         ('CR', 'Critical'),
     ]
 
-    issue_project = models.CharField(max_length=20, verbose_name='From Project', default='None')
+    issue_project = models.ForeignKey(Project, on_delete=models.CASCADE, to_field='project_name')
     issue_status = models.CharField(max_length=20, verbose_name='Status', default='Unconfirmed')
     issue_severity = models.CharField(max_length=2, choices=SEVERITY_CHOICES, default='LO', verbose_name='Severity')
+    issue_author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Author')
     issue_title = models.CharField(max_length=40, verbose_name='Title')
     issue_description = models.TextField(verbose_name='Description')
     issue_env = models.TextField(verbose_name='Environnement*', null=True, blank=True)
@@ -30,17 +44,3 @@ class Issue(models.Model):
 
     def __str__(self):
         return self.issue_title
-
-
-class Project(models.Model):
-    project_name = models.CharField(max_length=20, unique=True, verbose_name='Project Name', default='None')
-    project_admin = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Project Admin')
-    project_created = models.DateField(auto_now_add=True)
-    project_description = models.TextField(verbose_name='Description', null=True, blank=True)
-    #project_devs = USER_LIST
-    #project_issue = ISSUE_LIST
-    def add_project():
-        self.save()
-
-    def __str__(self):
-        return self.project_name

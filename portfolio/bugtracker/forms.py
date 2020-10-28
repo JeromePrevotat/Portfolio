@@ -7,7 +7,7 @@ class IssueForm(forms.ModelForm):
         model = Issue
         fields = ('issue_project', 'issue_severity', 'issue_title','issue_description','issue_env','issue_url','issue_proof','issue_steps','issue_expected','issue_extra')
         widgets = {
-            'issue_project':forms.TextInput(attrs={'class':'textinputclass'}),
+            'issue_project':forms.Select(),
             'issue_severity':forms.Select(),
             'issue_title':forms.TextInput(attrs={'class':'textinputclass'}),
             'issue_description':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent'}),
