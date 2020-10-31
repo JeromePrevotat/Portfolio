@@ -37,3 +37,9 @@ class ProjectForm(forms.ModelForm):
             'project_name':forms.TextInput(attrs={'class':'textinputclass'}),
             'project_description':forms.Textarea(attrs={'class':'textinputclass'}),
         }
+
+class ProjectAdminForm(forms.ModelForm):
+    class Meta:
+        model = Project
+        fields = ('project_name', 'project_admin', 'project_devs', 'project_description')
+        widgets = {'project_devs': forms.widgets.CheckboxSelectMultiple() }
