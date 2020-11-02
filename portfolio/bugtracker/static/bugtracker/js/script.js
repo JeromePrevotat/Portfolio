@@ -171,4 +171,16 @@ function sortElements(element1, element2, sortType, order){
   return false;
 }
 
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openSidebar() {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeSidebar() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
 init();
