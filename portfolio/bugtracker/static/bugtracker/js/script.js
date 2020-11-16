@@ -171,16 +171,59 @@ function sortElements(element1, element2, sortType, order){
   return false;
 }
 
+/******************************************************************************/
+/* Left Sidebar                                                               */
+/******************************************************************************/
+
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openSidebar() {
   document.getElementById("sidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("footer").style.marginLeft = "250px";
 }
 
 /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeSidebar() {
   document.getElementById("sidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("footer").style.marginLeft = "0";
 }
+
+/******************************************************************************/
+/* Accordion                                                                  */
+/******************************************************************************/
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+/******************************************************************************/
+/* Toggle Dark Mode                                                           */
+/******************************************************************************/
+function toggleDarkMode(){
+  document.getElementById("sidebar-container").classList.toggle("dark-mode");
+  document.getElementById("main").classList.toggle("dark-mode");
+  document.getElementById("footer").classList.toggle("dark-mode");
+  document.getElementById("table-header").classList.toggle("dark-mode");
+  document.getElementById("table-content").classList.toggle("dark-mode");
+}
+
+
 
 init();

@@ -26,5 +26,7 @@ urlpatterns = [
     path('bugtracker/register', register_views.register, name='bugtracker-register'),
     path('bugtracker/login', auth_views.LoginView.as_view(), name="bugtracker-login"),
     path('bugtracker/logout', auth_views.LogoutView.as_view(next_page='/bugtracker'), name="bugtracker-logout"),
+    path('accounts/password_change/', auth_views.PasswordChangeView.as_view(), name="password-change"),
+    path('accounts/password_change/done/', auth_views.PasswordChangeDoneView.as_view(), name="password_change_done"),
     #path('bugtracker/pwd_reset', auth_views.PasswordResetView.as_view()),
 ]

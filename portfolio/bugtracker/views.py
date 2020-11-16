@@ -63,3 +63,10 @@ class New_Project(LoginRequiredMixin, View):
             instance.save()
             return redirect('bugtracker-index')
         return render(request, self.template_name, {'form':form})
+
+
+class AccountView(LoginRequiredMixin, View):
+    template_name = 'bugtracker/account.html'
+
+    def get(self, request, *args, **kwars):
+        return render(request, self.template_name)

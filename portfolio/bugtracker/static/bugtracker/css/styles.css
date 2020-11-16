@@ -67,7 +67,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: white;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -10214,6 +10214,10 @@ body {
   background-color: #e9ecef;
 }
 
+/******************************************************************************/
+/* Left Sidebar                                                               */
+/******************************************************************************/
+
 /* The sidebar menu */
 .sidebar {
   height: 100%; /* 100% Full-height */
@@ -10222,14 +10226,14 @@ body {
   z-index: 1; /* Stay on top */
   top: 0;
   left: 0;
-  background-color: grey;
+  background-color: lightgrey;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
-/* The sidebar links */
-.sidebar a {
+/* The sidebar Category links */
+.sidebar .sidebar-category {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -10239,8 +10243,23 @@ body {
 }
 
 /* When you mouse over the navigation links, change their color */
+.sidebar .sidebar-category:hover {
+  color:black;
+  background-color: grey;
+}
+
+/* Sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
 .sidebar a:hover {
-  color:white;
+  background-color: grey;
 }
 
 /*Position and style the open button*/
@@ -10270,6 +10289,10 @@ body {
   margin-left: 50px;
 }
 
+.sidebar .closebtn:hover {
+  background-color: lightgrey;
+}
+
 /* Style page content - use this if you want to push the page content to the right
 when you open the side navigation */
 #main {
@@ -10282,4 +10305,74 @@ change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+}
+
+/******************************************************************************/
+/* Accordion                                                                  */
+/******************************************************************************/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: 0.4s;
+  font-size: 25px;
+  color: black;
+  background-color: lightgrey;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Add a background color to the button if it is clicked on
+(add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion-category:hover {
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
+
+/******************************************************************************/
+/* Dark Mode = Life                                                           */
+/******************************************************************************/
+
+.toggle-dark-mode-btn {
+  border: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.toggle-dark-mode-btn:hover {
+  border: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.dark-mode {
+  background-color: grey;
+  color: lightgrey;
+}
+
+.dark-mode select {
+  background-color: lightgrey;
+  color: black;
+}
+
+.dark-mode td {
+  background-color: grey;
+  color: lightgrey;
+}
+
+.dark-mode .openbtn {
+  background-color: grey;
 }

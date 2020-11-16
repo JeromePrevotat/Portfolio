@@ -18,19 +18,23 @@
               <a href="#" class="openbtn" onclick="openSidebar()" name="openSidebarBtn">&raquo;</a>
               <div id="sidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&laquo;</a>
-                <a href="#">My Account</a>
-                <a href="#">My Projects</a>
-                <a href="#">My Issues</a>
+                <a class="accordion accordion-category sidebar-category">My Account</a>
+                <div class="panel">
+                  <a href="{% url 'password-change' %}">Change Password</a>
+                </div>
+                <a href="#" class="accordion-category sidebar-category">My Projects</a>
+                <a href="#" class="accordion-category sidebar-category">My Issues</a>
               </div>
             </div>
             <main id="main">
                 <div class="container-fluid">
                     <h1 class="mt-4">Bug Tracker</h1>
+                    <a href="#" onclick="toggleDarkMode()" class="toggle-dark-mode-btn" name="toggleDarkModeBtn">Toggle Dark Mode <i class="fas fa-lightbulb"></i></a>
                     {% block content %}
                     {% endblock %}
                 </div>
             </main>
-            <footer class="py-4 bg-light mt-auto">
+            <footer id="footer" class="py-4 mt-auto">
                 <div class="container-fluid">
                     <div class="d-flex align-items-center justify-content-between small">
                         <div class="text-muted">Copyright &copy; Your Website 2019</div>

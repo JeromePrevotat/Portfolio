@@ -2,12 +2,12 @@
 {% load static %}
 {% block content %}
     <div class="card mb-4">
-        <div class="card-header">
+        <div id="table-header" class="card-header">
             <i class="fas fa-table mr-1"></i>
             {% block filters_bar_block %}
             {% endblock %}
         </div>
-        <div class="card-body">
+        <div id="table-content" class="card-body">
             <a href="{% url 'report-issue' %}">
             <button type="button" name="report-button" class="btn btn-danger">Report a new Issue</button></a>
             <a href="{% url 'new-project' %}">
